@@ -3,8 +3,11 @@
 # BOLD PRE-PROCESSING (in FSL FEAT)
 
 1st - Perform one Feat (GUI), on one illustrative subject, where we select all the options we want 
-2nd - Select the design.fsf file created and alter the subject/session data using the sed function to the appropriate subject/session creating a new design.fsf. 
+
+2nd - Select the design.fsf file created and alter the subject/session data using the sed function to the appropriate subject/session creating a new design.fsf.
+
 3rd - Call the Feat function using the new design.fsf (feat design.fsf)
+
 
 In FEAT:
 
