@@ -1,7 +1,7 @@
 % Joana Pinto,PhD
 % Adapted from Prof. Daniel Bulte 2018 script
 % Oxford, December 2020
-%% This function processes the PetCO2 timeseries to be used as regressor, including adding a time shift
+% This function processes the PetCO2 timeseries to be used as regressor, including adding a time shift
 % INPUT: physfile - PETCO2 raw data; brain_del - time shift
 % OUTPUT: out_co2 - PETCO2 processed; normocap and hypercap - average
 % PETCO2 values during those periods, respectively
