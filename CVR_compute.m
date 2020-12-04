@@ -1,7 +1,7 @@
 % Joana Pinto, December 2020, Oxford (joana.pinto@eng.ox.ac.uk)
 % This function computes CVR amplitude (and delay) measurements 
 % using two different GLM strategies
-% INPUT: filtered_func_data.nii.gz (BOLD pre processed), raw PETCO2.txt,
+% INPUT: filtered_func_data.nii.gz (BOLD pre processed), physio txt file with PETCO2 raw data,
 % shift_start in sec (first shift, e.g. -10) and shift_end in sec 
 % (last shift, e.g. 10) (e.g. -10:10)
 % OUTPUT: 1. WITHOUT temporal optimization
