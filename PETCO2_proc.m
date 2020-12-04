@@ -1,4 +1,4 @@
-% Joana Pinto,PhD
+% Joana Pinto, PhD, December 2020, Oxford
 % Adapted from Prof. Daniel Bulte 2018 script
 % Oxford, December 2020
 % This function processes the PetCO2 timeseries to be used as regressor, including adding a time shift
