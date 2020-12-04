@@ -1,4 +1,4 @@
-% Joana Pinto, December 2020, Oxford (joana.pinto@eng.ox.ac.uk)
+% Joana Pinto, December 2020, Oxford 
 % This function computes CVR amplitude (and delay) measurements 
 % using two different GLM strategies
 % INPUT: filtered_func_data.nii.gz (BOLD pre processed), physio txt file with PETCO2 raw data,
