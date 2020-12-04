@@ -9,3 +9,5 @@ Functions: CVR_compute.m and PETCO2_proc.m
 CVR_compute creates 3 images: (1) CVR amplitude without delay optimization (delay = 0), (2) CVR amplitude with delay optimization, (3) CVR delay
 
 CVR in %/mmHg and CVD in seconds
+
+![alt tag](http://url/to/img.png)
