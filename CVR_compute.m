@@ -1,4 +1,5 @@
-% Joana Pinto, December 2020, Oxford 
+% Joana Pinto, December 2020, Oxford
+
 % This function computes CVR amplitude (and delay) measurements 
 % using two different GLM strategies
 % INPUT: filtered_func_data.nii.gz (BOLD pre processed), physio txt file with PETCO2 raw data,
@@ -8,8 +9,7 @@
 %           1.1 CVR amplitude map 
 %        2. WITH temporal optimization
 %           2.1 CVR amplitude map 
-%           2.2 CVR delay map 
-%      
+%           2.2 CVR delay map       
 
 function [CVRamp,CVRtime,CVR_amp_nonopt] = CVR_compute(BOLD_path, PETCO2_path, shift_start, shift_end)
 
@@ -46,7 +46,7 @@ cope_opt = zeros(size(filtered_func_data,1), size(filtered_func_data,2), size(fi
 for i = 1:size(shifts,2) % shifts
 i  
 [trim_PETCO2,normocap(i),hypercap(i)]= PETCO2_proc(PETCO2, shifts(i))
-PETCO2_EV_conv = conv(trim_PETCO2,DG_HRF); % convolve with HRF
+PETCO2_EV_conv = conv(trim_PETCO2,DG_HRF,'valid'); % convolve with HRF
 PETCO2_EV_conv = (PETCO2_EV_conv -(min(PETCO2_EV_conv)))/(max(PETCO2_EV_conv )-min(PETCO2_EV_conv ));
 
 nTRs = size(trim_PETCO2,1);
@@ -54,7 +54,7 @@ nTRs = size(trim_PETCO2,1);
 %% GLM (*insert BASIL code here*)
 X = [];
 % Generate the design matrix
-X(:,1) = trim_PETCO2; X(:,2)=ones(nTRs,1); % X(:,3)=linspace(1,nTRs,nTRs)'; %3rd column models linear drift (a typical scan artifact)
+X(:,1) = PETCO2_EV_conv; X(:,2)=ones(nTRs,1); % X(:,3)=linspace(1,nTRs,nTRs)'; %3rd column models linear drift (a typical scan artifact)
 % plot design matrix (rescaled for plotting)
 figure(4) 
 % X(:,3) = X(:,3)/max(X(:,3));
