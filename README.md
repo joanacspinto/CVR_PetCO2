@@ -2,7 +2,7 @@
 Functions: CVR_compute.m and PETCO2_proc.m
 (CVR_compute.m calls PETCO2_proc.m)
 
-1st - Pre-process BOLD data using FSL's FEAT -> filtered_func_data.nii.gz
+- 1 Pre-process BOLD data using FSL's FEAT -> filtered_func_data.nii.gz
 
 2nd - Call "CVR_compute(filtered_func_data.nii.gz, raw physio dataset, shift start, shift end)"
 
@@ -11,3 +11,4 @@ CVR_compute creates 3 images: (1) CVR amplitude without delay optimization (dela
 CVR in %/mmHg and CVD in seconds
 
 ![alt tag](http://url/to/img.png)
+
