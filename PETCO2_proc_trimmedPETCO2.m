@@ -13,7 +13,7 @@
 %           2.1 CVR amplitude map
 %           2.2 CVR delay map
 
-function [CVRamp,CVRtime,CVR_amp_nonopt] = CVR_compute(BOLD_path, PETCO2_path, shift_start, shift_end, dPETCO2)
+function [CVRamp,CVRtime,CVR_amp_nonopt] = CVR_compute_processed(BOLD_path, PETCO2_path, shift_start, shift_end, dPETCO2)
 
 %% Uncomment below for debugging
 % BOLD_path = '/Users/joana/Documents/Work_Oxford/Data_extra/Sana_CVR/2018_119_nii/cvr.feat/filtered_func_data.nii.gz';
