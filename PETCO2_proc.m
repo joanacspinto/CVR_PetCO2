@@ -1,18 +1,17 @@
-% Joana Pinto, PhD, December 2020, Oxford
-% Adapted from Prof. Daniel Bulte 2018 script
-% Oxford, December 2020
+% Joana Pinto, December 2020, Oxford
+% Adapted from Daniel Bulte 2018 script
+
+% This function is called in CVR_compute.m
 % This function processes the PetCO2 timeseries to be used as regressor, including adding a time shift
 % INPUT: physfile - physio file with PETCO2 raw data; brain_del - time shift
-% OUTPUT: out_co2 - PETCO2 processed; normocap and hypercap - average
-% PETCO2 values during those periods, respectively
-
+% OUTPUT: out_co2 - PETCO2 processed; normocap and hypercap - average PETCO2 values during those periods, respectively
 
 function [out_co2, normocap,hypercap] = PETCO2_proc(physfile, brain_del)
 addpath('/usr/local/fsl/etc/matlab');
 
 %% SET PARAMETERS
 
-% Protocol 
+% Protocol (this depends on the protocol)
 baseline = 60; % Length of initial baseline block in seconds
 blocksizeon = 120; % Length of ON block in seconds
 blocksizeoff = 120; % Length of OFF block in seconds
