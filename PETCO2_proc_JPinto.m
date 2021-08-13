@@ -23,14 +23,12 @@ shift = mechan_shift + physio_shift; % total delay (time_shift)
 % CO2 sampling 
 samp_rate = 100; % Powerlab sampling rate (Hz)
 air_pres = 1020; % Enter barometric pressure in mbars:
-
 % FIND PEAKS options
 MinPeakDistVal = 500;
 MinPeakPromVal = 0.5;
 MinThresholdVal = 2;
 
 %% LOAD DATA
-
 physfile = load(physfile_in);
 timings = physfile(:,1);
 PETCO2 = physfile(:,2); % Second column is the PETCO2 values
@@ -67,7 +65,7 @@ trim_timings = timings(idx_begin(1):idx_end(1));
 
 % FIND PEAKS
 [PKS,LOCS]=findpeaks(trim_PETCO2, 'MinPeakDistance', MinPeakDistVal, 'MinPeakProminence',MinPeakPromVal); % values tested by trial and error
-LOCS (PKS < MinThresholdVal) = [];
+LOCS (PKS < MinThresholdVal) = []; % remove some outliers
 PKS (PKS < MinThresholdVal) = [];
 
 figure;  plot(trim_timings,trim_PETCO2); hold on; plot(trim_timings(LOCS), PKS,'r*');
