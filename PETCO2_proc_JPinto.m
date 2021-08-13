@@ -8,10 +8,10 @@ function [out_co2] = PETCO2_proc_v2(physfile_in, output_folder, physio_shift, me
 addpath('/usr/local/fsl/etc/matlab');
 
 % UNCOMMENT LINE FOR DEBUGGING
-physfile_in = '/Users/joana/Documents/Work_Oxford/Data_extra/OHBA/006/2018_119_006.txt'; % Path to the physiological data file
-output_folder = '/Users/joana/Documents/Work_Oxford/Data_extra/OHBA/output_test'; 
-physio_shift = 0;
-mechan_shift = -15;
+% physfile_in = '/Users/joana/Documents/Work_Oxford/Data_extra/OHBA/006/2018_119_006.txt'; % Path to the physiological data file
+% output_folder = '/Users/joana/Documents/Work_Oxford/Data_extra/OHBA/output_test'; 
+% physio_shift = 0;
+% mechan_shift = -15;
 
 %% SET PARAMETERS (always confirm these)
 % Set here manually, if not possible to retrieve from scanner triggers 
